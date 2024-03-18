@@ -7,14 +7,13 @@ Offset = 25
 #If GetKeyState("Capslock","P")
     ; Arrow Keys
 
-    ; ; vi Style (hjkl)
+    ; ; vi Style (hjkl) - disabled
     ; h::Left
     ; j::Down
     ; k::Up
     ; l::Right
 
-    ; temporary disabled
-    ; ijkl --> arrow keys
+    ; ijkl --> arrow keys - temporary disabled
     ; i::Up
     ; j::Left
     ; k::Down

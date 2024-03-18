@@ -2,7 +2,19 @@
 
 ## Alpha Version
 
-## v0.2.0-alpha1
+### v0.3.0-dev
+
+- 커서 이동 속도에 따른 단축키 추가
+  - 프로그램 수정에 따라, Capslock + ijkl 는 기존 방향키로 동작
+  - Capslock + Tab: 빠른 속도로 커서 이동
+  - Capslock + Shift: 느린 속도로 커서 이동
+
+### v0.2.1-release1
+
+- Capslock + ijkl 이용하여 마우스 커서 이동 기능 추가
+  - 기존 기능이었던 방향키 기능은 잠시 비활성화 하였음
+
+### v0.2.0-alpha1
 
 - Added Key: **PrintScreen**, **Home, End**, **PageUp, PageDown**
 - mouse control added
