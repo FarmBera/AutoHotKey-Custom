@@ -13,7 +13,6 @@ Offset = 25
     ; k::Up
     ; l::Right
 
-    ; temporary disabled
     ; ijkl --> arrow keys
     ; i::Up
     ; j::Left
@@ -74,7 +73,7 @@ Offset = 25
     b::Media_Next ; next song
 
 
-    ; function keys: number key line to F1-F12 keys
+    ; Function Keys: number key line to F1-F12 keys
     1::F1
     2::F2
     3::F3
