@@ -3,7 +3,14 @@ SetCapsLockState, AlwaysOff
 
 #If GetKeyState("Capslock","P")
     ; Arrow Keys
-    ;; ijkl --> arrow keys
+
+    ; ; vi Style (hjkl)
+    ; h::Left
+    ; j::Down
+    ; k::Up
+    ; l::Right
+
+    ; ijkl --> arrow keys
     i::Up
     j::Left
     k::Down
@@ -20,12 +27,15 @@ SetCapsLockState, AlwaysOff
     [::Home ; [ braket_open
     ]::End ; ] bracket_close
 
-    {;}::PgUp ; ; Semicolon
+    ; SC033::PgUp ; ; Semicolon
+    ;::PgUp ; ; Semicolon
+    ; :;::PgUp ; ; Semicolon
+    `;::PgUp
     '::PgDn
 
     .::Insert
     /::Del ; / slash
-    
+
     ; m::ScrollLock
     ; ,::Break ; Pause/Break
 
@@ -55,29 +65,32 @@ SetCapsLockState, AlwaysOff
 
 
     ; mouse control
-    y::WheelUp
-    h::WheelDown
-    ; t::
-    ; g::
-
+    y::WheelUp ; 마우스 휠 위로
+    h::WheelDown ; 마우스 휠 아래로
+    u::LButton ; 마우스 좌클릭
+    o::RButton ; 마우스 우클릭
 
 
 
     ; Not Using Now
 
-    ; p::+Enter
-
-    ; h::Home
-    ; SC027::End
-
-    ; n::^Home
-    ; m::^End
-
-    ; 7::PgUp
-    ; 8::PgDn
-
     ; Capslock ON
     ; c::CapsLock
+
+
+#If (GetKeyState("Capslock","P") && GetKeyState("e", "P"))
+    e::Return ; block key input
+
+    ; i:: ; mouse cursor up
+    ; j:: ; mouse cursor left
+    ; k:: ; mouse cursor down
+    ; l:: ; mouse cursor right
+
+    ; u::LButton
+    ; o::RButton
+    ; y::WheelUp
+    ; h::WheelDown
+
 
 ; Capslock Settings
     ; Capslock stand-alone: Switch Language
