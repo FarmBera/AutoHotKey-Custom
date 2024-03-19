@@ -1,3 +1,6 @@
+#SingleInstance, Force
+SendMode Input
+SetWorkingDir, %A_ScriptDir%
 #SingleInstance force
 SetCapsLockState, AlwaysOff
 
@@ -34,38 +37,38 @@ Offset = 25
     
     ; fast movement
     Tab & i:: ; cursor move up
-    While (GetKeyState("Tab","P") && GetKeyState("i","P")) {
+    While GetKeyState("i","P") {
         MouseMove, 0, (Offset * -1), 0, R
     }
     Tab & k:: ; cursor move down
-    While (GetKeyState("Tab","P") && GetKeyState("k","P")) {
+    While GetKeyState("k","P") {
         MouseMove, 0, Offset, 0, R
     }
     Tab & j:: ; cursor move left
-    While (GetKeyState("Tab","P") && GetKeyState("j","P")) {
+    While GetKeyState("j","P") {
         MouseMove, (Offset * -1), 0, 0, R
     }
     Tab & l:: ; cursor move right
-    While (GetKeyState("Tab","P") && GetKeyState("l","P")) {
+    While GetKeyState("l","P") {
         MouseMove, Offset, 0, 0, R
     }
 
     ; slow movement
     Shift & i:: ; cursor move up
-    While (GetKeyState("Shift","P") && GetKeyState("i","P")) {
-        MouseMove, 0, (Offset/2 * -1), 0, R
+    While GetKeyState("i","P") {
+        MouseMove, 0, (Offset * -1), 0, R
     }
     Shift & k:: ; cursor move down
-    While (GetKeyState("Shift","P") && GetKeyState("k","P")) {
-        MouseMove, 0, Offset/2, 0, R
+    While GetKeyState("k","P") {
+        MouseMove, 0, Offset, 0, R
     }
     Shift & j:: ; cursor move left
-    While (GetKeyState("Shift","P") && GetKeyState("j","P")) {
-        MouseMove, (Offset/2 * -1), 0, 0, R
+    While GetKeyState("j","P") {
+        MouseMove, (Offset * -1), 0, 0, R
     }
     Shift & l:: ; cursor move right
-    While (GetKeyState("Shift","P") && GetKeyState("l","P")) {
-        MouseMove, Offset/2, 0, 0, R
+    While GetKeyState("l","P") {
+        MouseMove, Offset, 0, 0, R
     }
 
 
