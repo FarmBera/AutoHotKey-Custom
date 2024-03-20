@@ -33,38 +33,38 @@ Offset = 25
     o::RButton ; mouse right click
     
     ; fast movement
-    Tab & i:: ; cursor move up
-    While (GetKeyState("Tab","P") && GetKeyState("i","P")) {
+    Shift & i:: ; cursor move up
+    While (GetKeyState("Shift","P") && GetKeyState("i","P")) {
         MouseMove, 0, (Offset * -1), 0, R
     }
-    Tab & k:: ; cursor move down
-    While (GetKeyState("Tab","P") && GetKeyState("k","P")) {
+    Shift & k:: ; cursor move down
+    While (GetKeyState("Shift","P") && GetKeyState("k","P")) {
         MouseMove, 0, Offset, 0, R
     }
-    Tab & j:: ; cursor move left
-    While (GetKeyState("Tab","P") && GetKeyState("j","P")) {
+    Shift & j:: ; cursor move left
+    While (GetKeyState("Shift","P") && GetKeyState("j","P")) {
         MouseMove, (Offset * -1), 0, 0, R
     }
-    Tab & l:: ; cursor move right
-    While (GetKeyState("Tab","P") && GetKeyState("l","P")) {
+    Shift & l:: ; cursor move right
+    While (GetKeyState("Shift","P") && GetKeyState("l","P")) {
         MouseMove, Offset, 0, 0, R
     }
 
     ; slow movement
-    Shift & i:: ; cursor move up
-    While (GetKeyState("Shift","P") && GetKeyState("i","P")) {
+    Tab & i:: ; cursor move up
+    While (GetKeyState("Tab","P") && GetKeyState("i","P")) {
         MouseMove, 0, (Offset/2 * -1), 0, R
     }
-    Shift & k:: ; cursor move down
-    While (GetKeyState("Shift","P") && GetKeyState("k","P")) {
+    Tab & k:: ; cursor move down
+    While (GetKeyState("Tab","P") && GetKeyState("k","P")) {
         MouseMove, 0, Offset/2, 0, R
     }
-    Shift & j:: ; cursor move left
-    While (GetKeyState("Shift","P") && GetKeyState("j","P")) {
+    Tab & j:: ; cursor move left
+    While (GetKeyState("Tab","P") && GetKeyState("j","P")) {
         MouseMove, (Offset/2 * -1), 0, 0, R
     }
-    Shift & l:: ; cursor move right
-    While (GetKeyState("Shift","P") && GetKeyState("l","P")) {
+    Tab & l:: ; cursor move right
+    While (GetKeyState("Tab","P") && GetKeyState("l","P")) {
         MouseMove, Offset/2, 0, 0, R
     }
 

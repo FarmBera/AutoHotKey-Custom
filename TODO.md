@@ -2,14 +2,18 @@
 
 ## Bugs
 
-- [Solved] Bug Fix: 키보드 이용하여 마우스 움직이기 수정
-  - 마우스 움직이면 위쪽 방향키 입력되는 오류
-- [Solved] Capslock + E 누르고 있으면 e키 반복 입력되는 문제
+- None
 
 ## Next TODO
 
 - 마우스 키 홀딩
   - 좌클릭/우클릭 홀딩
+
+## Solved Bugs
+
+- [Solved] Bug Fix: 키보드 이용하여 마우스 움직이기 수정
+  - 마우스 움직이면 위쪽 방향키 입력되는 오류
+- [Solved] ~~Capslock + E 누르고 있으면 e키 반복 입력되는 문제~~
 
 ## v0.2.0-dev TODO
 

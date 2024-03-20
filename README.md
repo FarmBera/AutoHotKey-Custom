@@ -13,22 +13,17 @@
 
 | Key Stroke           | Actions                 |
 | -------------------- | ----------------------- |
-| `Arrow keys: ijkl`| |
+| `Arrow keys with ijkl`| |
 | Capslock + i         | Arrow Up                |
 | Capslock + j         | Arrow Left              |
 | Capslock + k         | Arrow Down              |
 | Capslock + l         | Arrow Right             |
-| `Arrow Keys: wasd` | |
+| `Arrow Keys with wasd` | |
 | Capslock + w         | Arrow Up                |
 | Capslock + a         | Arrow Left              |
 | Capslock + s         | Arrow Down              |
 | Capslock + d         | Arrow Right             |
-| `Arrow Keys (vim style): hjkl`| |
-| Capslock + h         | Arrow Left              |
-| Capslock + j         | Arrow Down              |
-| Capslock + k         | Arrow Up                |
-| Capslock + l         | Arrow Right             |
-| `Other Keys`                    |                         |
+| `Other Keys` | |
 | Capslock + p         | PrintScreen             |
 | Capslock + [         | Home                    |
 | Capslock + ]         | End                     |
@@ -36,16 +31,14 @@
 | Capslock + '         | PageDown                |
 | Capslock + .         | Insert                  |
 | Capslock + /         | Del                     |
-| Capslock + m         | ScrollLock              |
-| Capslock + ,         | Break                   |
-|   `Media Control`                   |                         |
+| `Media Control` | |
 | Capslock + f         | Media Play Pause        |
 | Capslock + z         | Volume Mute             |
 | Capslock + x         | Volume Down             |
 | Capslock + c         | Volume Up               |
 | Capslock + v         | Media Previous          |
 | Capslock + b         | Media Next              |
-|   `FN Keys`                   |                         |
+| `FN Keys` | |
 | Capslock + 1         | F1                      |
 | Capslock + 2         | F2                      |
 | Capslock + 3         | F3                      |
@@ -58,9 +51,9 @@
 | Capslock + 0         | F10                     |
 | Capslock + -         | F11                     |
 | Capslock + =         | F12                     |
-|    `Native Capslock`                  |                         |
+| `Native Capslock` | |
 | Capslock             | 한/영 전환              |
-|     Mouse Control                 |                         |
+| `Mouse Control` | |
 | Capslock + Tab + i   | Move Mouse Up Fast      |
 | Capslock + Tab + j   | Move Mouse Left Fast    |
 | Capslock + Tab + k   | Move Mouse Down Fast    |
@@ -68,3 +61,16 @@
 | Capslock + Shift + i | Move Mouse Up Slowly    |
 | Capslock + Shift + j | Move Mouse Left Slowly  |
 | Capslock + Shift + k | Move Mouse Down Slowly  |
+| Capslock + Shift + l | Move Mouse Right Slowly  |
+
+Disabled Keys
+
+| Key Stroke | Actions |
+|-|-|
+| `Arrow Keys (vim style): hjkl`| |
+| Capslock + h         | Arrow Left              |
+| Capslock + j         | Arrow Down              |
+| Capslock + k         | Arrow Up                |
+| Capslock + l         | Arrow Right             |
+| Capslock + m         | ScrollLock              |
+| Capslock + ,         | Break                   |
