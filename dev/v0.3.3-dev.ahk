@@ -1,13 +1,13 @@
 #SingleInstance force
 SetCapsLockState, AlwaysOff
 
-Offset = 25 ; mouse movement offset value
+Offset = 25
 
 
 #If GetKeyState("Capslock","P")
     ; Arrow Keys
 
-    ; vi Style (hjkl) - disabled
+    ; ; vi Style (hjkl) - disabled
     ; h::Left
     ; j::Down
     ; k::Up
@@ -27,10 +27,10 @@ Offset = 25 ; mouse movement offset value
 
 
     ; mouse control
-    y::WheelUp
-    h::WheelDown
-    u::LButton
-    o::RButton
+    y::WheelUp ; mouse wheel up
+    h::WheelDown ; mouse wheel down
+    u::LButton ; mouse left click
+    o::RButton ; mouse right click
     
     ; fast movement
     Shift & i:: ; cursor move up
@@ -51,48 +51,48 @@ Offset = 25 ; mouse movement offset value
     }
 
     ; slow movement
-    Tab & i:: ; cursor move up
-    While (GetKeyState("Tab","P") && GetKeyState("i","P")) {
+    Ctrl & i:: ; cursor move up
+    While (GetKeyState("Ctrl","P") && GetKeyState("i","P")) {
         MouseMove, 0, (Offset/2 * -1), 0, R
     }
-    Tab & k:: ; cursor move down
-    While (GetKeyState("Tab","P") && GetKeyState("k","P")) {
+    Ctrl & k:: ; cursor move down
+    While (GetKeyState("Ctrl","P") && GetKeyState("k","P")) {
         MouseMove, 0, Offset/2, 0, R
     }
-    Tab & j:: ; cursor move left
-    While (GetKeyState("Tab","P") && GetKeyState("j","P")) {
+    Ctrl & j:: ; cursor move left
+    While (GetKeyState("Ctrl","P") && GetKeyState("j","P")) {
         MouseMove, (Offset/2 * -1), 0, 0, R
     }
-    Tab & l:: ; cursor move right
-    While (GetKeyState("Tab","P") && GetKeyState("l","P")) {
+    Ctrl & l:: ; cursor move right
+    While (GetKeyState("Ctrl","P") && GetKeyState("l","P")) {
         MouseMove, Offset/2, 0, 0, R
     }
 
 
     ; additional keys
     p::PrintScreen
-    [::Home
-    ]::End
+    [::Home ; [ braket_open
+    ]::End ; ] bracket_close
     
     `;::PgUp
     '::PgDn
     
     .::Insert
-    /::Del
+    /::Del ; / slash
     ; m::ScrollLock
-    ; ,::Break
+    ; ,::Break ; Pause/Break
 
 
     ; media control
-    f::Media_Play_Pause
-    z::Volume_Mute
-    x::Volume_Down
-    c::Volume_Up
-    v::Media_Prev
-    b::Media_Next
+    f::Media_Play_Pause ; play/pause
+    z::Volume_Mute ; mute
+    x::Volume_Down ; vol down
+    c::Volume_Up ; vol up
+    v::Media_Prev ; previous song
+    b::Media_Next ; next song
 
 
-    ; function keys
+    ; function keys: number key line to F1-F12 keys
     1::F1
     2::F2
     3::F3
@@ -107,8 +107,10 @@ Offset = 25 ; mouse movement offset value
     =::F12
 
 
-    ; not using now
-    ; c::CapsLock ;capslock toggle 
+    ; Not Using Now
+
+    ; Capslock ON
+    ; c::CapsLock
 
 
 ; Capslock Settings
