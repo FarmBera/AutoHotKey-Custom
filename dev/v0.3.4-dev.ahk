@@ -3,6 +3,9 @@ SetCapsLockState, AlwaysOff
 
 Offset = 25 ; mouse movement offset value
 
+#If GetKeyState("Shift", "P")
+    CapsLock::CapsLock
+
 
 #If GetKeyState("Capslock","P")
     ; Arrow Keys
@@ -33,40 +36,42 @@ Offset = 25 ; mouse movement offset value
     o::RButton
     
     ; fast movement
-    Shift & i:: ; cursor move up
-    While (GetKeyState("Shift","P") && GetKeyState("i","P")) {
-        MouseMove, 0, (Offset * -1), 0, R
-    }
-    Shift & k:: ; cursor move down
-    While (GetKeyState("Shift","P") && GetKeyState("k","P")) {
-        MouseMove, 0, Offset, 0, R
-    }
-    Shift & j:: ; cursor move left
-    While (GetKeyState("Shift","P") && GetKeyState("j","P")) {
-        MouseMove, (Offset * -1), 0, 0, R
-    }
-    Shift & l:: ; cursor move right
-    While (GetKeyState("Shift","P") && GetKeyState("l","P")) {
-        MouseMove, Offset, 0, 0, R
-    }
+    #If (GetKeyState("Shift","P")
+        i:: ; cursor move up
+        While (GetKeyState("i","P")) {
+            MouseMove, 0, (Offset * -1), 0, R
+        }
+        k:: ; cursor move down
+        While (GetKeyState("k","P")) {
+            MouseMove, 0, Offset, 0, R
+        }
+        j:: ; cursor move left
+        While (GetKeyState("j","P")) {
+            MouseMove, (Offset * -1), 0, 0, R
+        }
+        l:: ; cursor move right
+        While (GetKeyState("l","P")) {
+            MouseMove, Offset, 0, 0, R
+        }
 
     ; slow movement
-    Ctrl & i:: ; cursor move up
-    While (GetKeyState("Ctrl","P") && GetKeyState("i","P")) {
-        MouseMove, 0, (Offset/2 * -1), 0, R
-    }
-    Ctrl & k:: ; cursor move down
-    While (GetKeyState("Ctrl","P") && GetKeyState("k","P")) {
-        MouseMove, 0, Offset/2, 0, R
-    }
-    Ctrl & j:: ; cursor move left
-    While (GetKeyState("Ctrl","P") && GetKeyState("j","P")) {
-        MouseMove, (Offset/2 * -1), 0, 0, R
-    }
-    Ctrl & l:: ; cursor move right
-    While (GetKeyState("Ctrl","P") && GetKeyState("l","P")) {
-        MouseMove, Offset/2, 0, 0, R
-    }
+    #If GetKeyState("Ctrl","P")
+        i:: ; cursor move up
+        While (GetKeyState("i","P")) {
+            MouseMove, 0, (Offset/2 * -1), 0, R
+        }
+        k:: ; cursor move down
+        While (GetKeyState("k","P")) {
+            MouseMove, 0, Offset/2, 0, R
+        }
+        j:: ; cursor move left
+        While (GetKeyState("j","P")) {
+            MouseMove, (Offset/2 * -1), 0, 0, R
+        }
+        l:: ; cursor move right
+        While (GetKeyState("l","P")) {
+            MouseMove, Offset/2, 0, 0, R
+        }
 
 
     ; additional keys

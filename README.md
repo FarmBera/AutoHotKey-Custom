@@ -23,7 +23,7 @@
 | Capslock + a | Arrow Left              |
 | Capslock + s | Arrow Down              |
 | Capslock + d | Arrow Right             |
-| `Other Keys` | |
+| `Additional Keys` | |
 | Capslock + p | PrintScreen             |
 | Capslock + [ | Home                    |
 | Capslock + ] | End                     |
@@ -54,14 +54,18 @@
 | `Native Capslock` | |
 | Capslock | 한/영 전환              |
 | `Mouse Control` | |
-| Capslock + Tab + i   | Move Mouse Up Fast      |
-| Capslock + Tab + j   | Move Mouse Left Fast    |
-| Capslock + Tab + k   | Move Mouse Down Fast    |
-| Capslock + Tab + l   | Move Mouse Right Fast   |
+| Capslock + Ctrl + i   | Move Mouse Up Fast      |
+| Capslock + Ctrl + j   | Move Mouse Left Fast    |
+| Capslock + Ctrl + k   | Move Mouse Down Fast    |
+| Capslock + Ctrl + l   | Move Mouse Right Fast   |
 | Capslock + Shift + i | Move Mouse Up Slowly    |
 | Capslock + Shift + j | Move Mouse Left Slowly  |
 | Capslock + Shift + k | Move Mouse Down Slowly  |
 | Capslock + Shift + l | Move Mouse Right Slowly  |
+| Capslock + y | Mouse Wheel Up |
+| Capslock + h | Mouse Wheel Down |
+| Capslock + u | Mouse Left Button |
+| Capslock + o | Mouse Right Button |
 
 Disabled Keys
 
