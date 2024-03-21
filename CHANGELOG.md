@@ -10,15 +10,19 @@
 
 ### v0.3.2-release
 
+- 커서 이동 속도에 따른 단축키 변경
+  - Shift: fast movement
+  - Ctrl: slow movement
+
 ### v0.3.2-rc
 
 - 커서 이동 속도에 따른 단축키 변경
-  - Tab: slow movement
   - Shift: fast movement
+  - Tab: slow movement
 
 ### v0.3.1-rc
 
-- 커서 이동 속도에 따른 단축키 추가 
+- 커서 이동 속도에 따른 단축키 추가
   - 프로그램 수정에 따라, Capslock + ijkl 는 기존 방향키로 동작
   - Tab: fast movement
   - Shift: slow movement

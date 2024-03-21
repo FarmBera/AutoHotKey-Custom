@@ -13,11 +13,6 @@
 
 | Key Stroke | Actions |
 | -------------------- | ----------------------- |
-| `Arrow Keys with hjkl (vim style) - disabled` | |
-| Capslock + h | Capslock + Arrow |
-| Capslock + j | Capslock + Arrow |
-| Capslock + k | Capslock + Arrow |
-| Capslock + l | Capslock + Arrow |
 | `Arrow keys with ijkl`| |
 | Capslock + i | Arrow Up                |
 | Capslock + j | Arrow Left              |
@@ -72,10 +67,11 @@ Disabled Keys
 
 | Key Stroke | Actions |
 |-|-|
-| `Arrow Keys (vim style): hjkl`| |
-| Capslock + h | Arrow Left              |
-| Capslock + j | Arrow Down              |
-| Capslock + k | Arrow Up                |
-| Capslock + l | Arrow Right             |
-| Capslock + m | ScrollLock              |
-| Capslock + , | Break                   |
+| `Arrow Keys with hjkl (vim style) - disabled` | |
+| Capslock + h | Capslock + Arrow |
+| Capslock + j | Capslock + Arrow |
+| Capslock + k | Capslock + Arrow |
+| Capslock + l | Capslock + Arrow |
+| `Additional Keys` | |
+| Capslock + m | ScrollLock       |
+| Capslock + , | Break            |
