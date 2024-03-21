@@ -51,20 +51,20 @@ Offset = 25 ; mouse movement offset value
     }
 
     ; slow movement
-    Tab & i:: ; cursor move up
-    While (GetKeyState("Tab","P") && GetKeyState("i","P")) {
+    Ctrl & i:: ; cursor move up
+    While (GetKeyState("Ctrl","P") && GetKeyState("i","P")) {
         MouseMove, 0, (Offset/2 * -1), 0, R
     }
-    Tab & k:: ; cursor move down
-    While (GetKeyState("Tab","P") && GetKeyState("k","P")) {
+    Ctrl & k:: ; cursor move down
+    While (GetKeyState("Ctrl","P") && GetKeyState("k","P")) {
         MouseMove, 0, Offset/2, 0, R
     }
-    Tab & j:: ; cursor move left
-    While (GetKeyState("Tab","P") && GetKeyState("j","P")) {
+    Ctrl & j:: ; cursor move left
+    While (GetKeyState("Ctrl","P") && GetKeyState("j","P")) {
         MouseMove, (Offset/2 * -1), 0, 0, R
     }
-    Tab & l:: ; cursor move right
-    While (GetKeyState("Tab","P") && GetKeyState("l","P")) {
+    Ctrl & l:: ; cursor move right
+    While (GetKeyState("Ctrl","P") && GetKeyState("l","P")) {
         MouseMove, Offset/2, 0, 0, R
     }
 
@@ -108,11 +108,10 @@ Offset = 25 ; mouse movement offset value
 
 
     ; not using now
-    ; c::CapsLock ;capslock toggle 
+    ; c::CapsLock ; capslock toggle 
 
 
-; Capslock Settings
-    ; Capslock stand-alone: Switch Language
+; capslock stand-alone setting
 #If
 *CapsLock::
 KeyWait, CapsLock

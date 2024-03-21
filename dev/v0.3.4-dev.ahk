@@ -1,13 +1,13 @@
 #SingleInstance force
 SetCapsLockState, AlwaysOff
 
-Offset = 25
+Offset = 25 ; mouse movement offset value
 
 
 #If GetKeyState("Capslock","P")
     ; Arrow Keys
 
-    ; ; vi Style (hjkl) - disabled
+    ; vi Style (hjkl) - disabled
     ; h::Left
     ; j::Down
     ; k::Up
@@ -27,10 +27,10 @@ Offset = 25
 
 
     ; mouse control
-    y::WheelUp ; mouse wheel up
-    h::WheelDown ; mouse wheel down
-    u::LButton ; mouse left click
-    o::RButton ; mouse right click
+    y::WheelUp
+    h::WheelDown
+    u::LButton
+    o::RButton
     
     ; fast movement
     Shift & i:: ; cursor move up
@@ -71,28 +71,28 @@ Offset = 25
 
     ; additional keys
     p::PrintScreen
-    [::Home ; [ braket_open
-    ]::End ; ] bracket_close
+    [::Home
+    ]::End
     
     `;::PgUp
     '::PgDn
     
     .::Insert
-    /::Del ; / slash
+    /::Del
     ; m::ScrollLock
-    ; ,::Break ; Pause/Break
+    ; ,::Break
 
 
     ; media control
-    f::Media_Play_Pause ; play/pause
-    z::Volume_Mute ; mute
-    x::Volume_Down ; vol down
-    c::Volume_Up ; vol up
-    v::Media_Prev ; previous song
-    b::Media_Next ; next song
+    f::Media_Play_Pause
+    z::Volume_Mute
+    x::Volume_Down
+    c::Volume_Up
+    v::Media_Prev
+    b::Media_Next
 
 
-    ; function keys: number key line to F1-F12 keys
+    ; function keys
     1::F1
     2::F2
     3::F3
@@ -107,14 +107,11 @@ Offset = 25
     =::F12
 
 
-    ; Not Using Now
-
-    ; Capslock ON
-    ; c::CapsLock
+    ; not using now
+    ; c::CapsLock ; capslock toggle 
 
 
-; Capslock Settings
-    ; Capslock stand-alone: Switch Language
+; capslock stand-alone setting
 #If
 *CapsLock::
 KeyWait, CapsLock
