@@ -1,11 +1,60 @@
 #SingleInstance force
 SetCapsLockState, AlwaysOff
 
+; global variables
 Offset = 25 ; mouse movement offset value
 
 
+; For School Computers
+
+; numberpad actions
+Numpad0::^z ; Ctrl + Z --> Undo
+NumpadDot::^y ; Ctrl + Y --> Redo
+NumpadAdd::^s ; Ctrl + S --> Save
+
+; powerpoint pen tools
+Numpad1:: ; pen 1
+    CoordMode, Mouse, Screen
+    MouseClick, Left, 185, 140, 1
+    return
+Numpad2:: ; pen 2
+    CoordMode, Mouse, Screen
+    mouseclick, Left, 230, 140, 1
+    return
+Numpad3:: ; pen 3
+    CoordMode, Mouse, Screen
+    mouseclick, Left, 280, 140, 1
+    return
+Numpad4:: ; highlighter 1
+    CoordMode, Mouse, Screen
+    mouseclick, Left, 370, 140, 1
+    return
+Numpad5:: ; highlighter 2
+    CoordMode, Mouse, Screen
+    mouseclick, Left, 420, 140, 1
+    return
+Numpad6:: ; highlighter 3
+    CoordMode, Mouse, Screen
+    mouseclick, Left, 470, 140, 1
+    return
+Numpad7:: ; cursor tool
+    CoordMode, Mouse, Screen
+    mouseclick, Left, 30, 140, 1
+    return
+Numpad8:: ; lasso tool
+    CoordMode, Mouse, Screen
+    mouseclick, Left, 80, 140, 1
+    return
+Numpad9:: ; eraser tool
+    CoordMode, Mouse, Screen
+    mouseclick, Left, 130, 140, 1
+    return
+
+
+
+; Capslock Actions
 #If GetKeyState("Capslock","P")
-    ; Arrow Keys
+    ; arrow keys
 
     ; vi Style (hjkl) - disabled
     ; h::Left
@@ -33,38 +82,38 @@ Offset = 25 ; mouse movement offset value
     o::RButton
     
     ; fast movement
-    Shift & i:: ; cursor move up
-    While (GetKeyState("Shift","P") && GetKeyState("i","P")) {
+    Home:: ; cursor move up
+    While (GetKeyState("Home","P")) {
         MouseMove, 0, (Offset * -1), 0, R
     }
-    Shift & k:: ; cursor move down
-    While (GetKeyState("Shift","P") && GetKeyState("k","P")) {
+    Del:: ; cursor move down
+    While (GetKeyState("Del","P")) {
         MouseMove, 0, Offset, 0, R
     }
-    Shift & j:: ; cursor move left
-    While (GetKeyState("Shift","P") && GetKeyState("j","P")) {
+    End:: ; cursor move left
+    While (GetKeyState("End","P")) {
         MouseMove, (Offset * -1), 0, 0, R
     }
-    Shift & l:: ; cursor move right
-    While (GetKeyState("Shift","P") && GetKeyState("l","P")) {
+    PgDn:: ; cursor move right
+    While (GetKeyState("PgDn","P")) {
         MouseMove, Offset, 0, 0, R
     }
 
     ; slow movement
-    Ctrl & i:: ; cursor move up
-    While (GetKeyState("Ctrl","P") && GetKeyState("i","P")) {
+    Up:: ; cursor move up
+    While (GetKeyState("Up","P")) {
         MouseMove, 0, (Offset/2 * -1), 0, R
     }
-    Ctrl & k:: ; cursor move down
-    While (GetKeyState("Ctrl","P") && GetKeyState("k","P")) {
+    Down:: ; cursor move down
+    While (GetKeyState("Down","P")) {
         MouseMove, 0, Offset/2, 0, R
     }
-    Ctrl & j:: ; cursor move left
-    While (GetKeyState("Ctrl","P") && GetKeyState("j","P")) {
+    Left:: ; cursor move left
+    While (GetKeyState("Left","P")) {
         MouseMove, (Offset/2 * -1), 0, 0, R
     }
-    Ctrl & l:: ; cursor move right
-    While (GetKeyState("Ctrl","P") && GetKeyState("l","P")) {
+    Right:: ; cursor move right
+    While (GetKeyState("Right","P")) {
         MouseMove, Offset/2, 0, 0, R
     }
 
@@ -108,7 +157,7 @@ Offset = 25 ; mouse movement offset value
 
 
     ; not using now
-    ; c::CapsLock ; capslock toggle 
+    q::CapsLock ; capslock toggle 
 
 
 ; capslock stand-alone setting

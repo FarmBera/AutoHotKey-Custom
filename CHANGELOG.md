@@ -2,6 +2,36 @@
 
 ## Alpha Version
 
+### v0.3.7-dev
+
+- 변수 사용 테스트
+
+### v0.3.6-dev
+
+- 학교 전용 파일에 Number Pad 커스텀 기능 추가
+  - undo, redo, save 단축키
+  - 편한 powerpoint markup을 위한 단축키
+    - 펜, 하이라이터 및 기타 도구 좌표로 마우스 커서 이동 후, 클릭 동작
+- 멤브레인 키보드 동시입력 이슈로 인하여 임시로 키입력 변경
+  - Capslock 누른 상태에서 동작은 동일
+  - 빠르게 이동: ijkl --> Home, Del, End, PgDn
+  - 느리게 이동: ijkl --> Up, Down, Left, Right (방향키)
+
+Key bindings
+
+- `0` --> Ctrl + Z
+- `.` --> Ctrl + Y
+- `+` --> Ctrl + S
+- `1` --> pen tool 1
+- `2` --> pen tool 2
+- `3` --> pen tool 3
+- `4` --> highlighter tool 1
+- `5` --> highlighter tool 2
+- `6` --> highlighter tool 3
+- `7` --> cursor tool
+- `8` --> lasso tool
+- `9` --> eraser tool
+
 ### v0.3.5-dev
 
 - 학교 전용 파일 추가
