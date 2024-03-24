@@ -3,6 +3,14 @@ SetCapsLockState, AlwaysOff
 
 Offset = 25 ; mouse movement offset value
 
+CurMoveFast := "Shift"
+CurMoveSlow := "Tab"
+
+CurKeyUp := "i"
+CurKeyDown := "k"
+CurKeyLeft := "j"
+CurKeyRight := "l"
+
 
 #If GetKeyState("Capslock","P")
     ; Arrow Keys
@@ -109,7 +117,7 @@ Offset = 25 ; mouse movement offset value
 
 
     ; not using now
-    q::CapsLock ; capslock toggle 
+    ; q::CapsLock ; capslock toggle 
 
 
 ; capslock stand-alone setting

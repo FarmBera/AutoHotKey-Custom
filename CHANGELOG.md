@@ -4,6 +4,8 @@
 
 ### v0.3.7-dev
 
+- Capslock 토글 전용 키 추가
+  - Capslock + Q
 - 변수 사용 테스트
 
 ### v0.3.6-rc
