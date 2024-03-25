@@ -1,16 +1,19 @@
-#SingleInstance force
+#SingleInstance Force
 SetCapsLockState, AlwaysOff
+SetDefaultMouseSpeed, 0
 
-; global variables
+
 Offset = 25 ; mouse movement offset value
+OffsetSlow = Offset/2 ; slow mouse movement
 
-
-; For School Computers
 
 ; numberpad actions
 Numpad0::^z ; Ctrl + Z --> Undo
+    return
 NumpadDot::^y ; Ctrl + Y --> Redo
+    return
 NumpadAdd::^s ; Ctrl + S --> Save
+    return
 
 ; powerpoint pen tools
 Numpad1:: ; pen 1
@@ -51,24 +54,16 @@ Numpad9:: ; eraser tool
     return
 
 
-
-; Capslock Actions
 #If GetKeyState("Capslock","P")
-    ; arrow keys
+    q::CapsLock
 
-    ; vi Style (hjkl) - disabled
-    ; h::Left
-    ; j::Down
-    ; k::Up
-    ; l::Right
 
-    ; ijkl --> arrow keys
+    ; ijkl arrow
     i::Up
     j::Left
     k::Down
     l::Right
-
-    ; wasd --> arrow keys
+    ; wasd arrow
     w::Up
     a::Left
     s::Down
@@ -76,60 +71,69 @@ Numpad9:: ; eraser tool
 
 
     ; mouse control
+    e::WheelDown
+    r::WheelUp
+    ; t::WheelUp
+    ; g::WheelDown
     y::WheelUp
     h::WheelDown
     u::LButton
     o::RButton
-    
+
     ; fast movement
     Home:: ; cursor move up
-    While (GetKeyState("Home","P")) {
-        MouseMove, 0, (Offset * -1), 0, R
-    }
-    Del:: ; cursor move down
-    While (GetKeyState("Del","P")) {
-        MouseMove, 0, Offset, 0, R
-    }
-    End:: ; cursor move left
-    While (GetKeyState("End","P")) {
-        MouseMove, (Offset * -1), 0, 0, R
-    }
+        While (GetKeyState("Home","P")) {
+            MouseMove, 0, (Offset * -1), 0, R
+        }
+    End:: ; cursor move down
+        While (GetKeyState("End","P")) {
+            MouseMove, 0, Offset, 0, R
+        }
+    Del:: ; cursor move left
+        While (GetKeyState("Del","P")) {
+            MouseMove, (Offset * -1), 0, 0, R
+        }
     PgDn:: ; cursor move right
-    While (GetKeyState("PgDn","P")) {
-        MouseMove, Offset, 0, 0, R
-    }
+        While (GetKeyState("PgDn","P")) {
+            MouseMove, Offset, 0, 0, R
+        }
 
     ; slow movement
     Up:: ; cursor move up
-    While (GetKeyState("Up","P")) {
-        MouseMove, 0, (Offset/2 * -1), 0, R
-    }
+        While (GetKeyState("Up","P")) {
+            MouseMove, 0, (OffsetSlow * -1), 0, R
+        }
     Down:: ; cursor move down
-    While (GetKeyState("Down","P")) {
-        MouseMove, 0, Offset/2, 0, R
-    }
+        While (GetKeyState("Down","P")) {
+            MouseMove, 0, OffsetSlow, 0, R
+        }
     Left:: ; cursor move left
-    While (GetKeyState("Left","P")) {
-        MouseMove, (Offset/2 * -1), 0, 0, R
-    }
+        While (GetKeyState("Left","P")) {
+            MouseMove, (OffsetSlow * -1), 0, 0, R
+        }
     Right:: ; cursor move right
-    While (GetKeyState("Right","P")) {
-        MouseMove, Offset/2, 0, 0, R
-    }
+        While (GetKeyState("Right","P")) {
+            MouseMove, OffsetSlow, 0, 0, R
+        }
+    
+    Return
 
 
-    ; additional keys
+     ; additional keys
+    Esc::`
+
     p::PrintScreen
     [::Home
     ]::End
-    
+
     `;::PgUp
     '::PgDn
-    
+
     .::Insert
     /::Del
     ; m::ScrollLock
     ; ,::Break
+    ; \::Pause
 
 
     ; media control
@@ -156,11 +160,7 @@ Numpad9:: ; eraser tool
     =::F12
 
 
-    ; not using now
-    q::CapsLock ; capslock toggle 
-
-
-; capslock stand-alone setting
+; capslock stand-alone
 #If
 *CapsLock::
 KeyWait, CapsLock

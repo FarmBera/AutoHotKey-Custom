@@ -1,25 +1,21 @@
 #SingleInstance force
 SetCapsLockState, AlwaysOff
 
+
 Offset = 25 ; mouse movement offset value
+OffsetSlow = Offset/2 ; slow mouse movement
 
 
 #If GetKeyState("Capslock","P")
-    ; Arrow Keys
+    q::CapsLock
 
-    ; vi Style (hjkl) - disabled
-    ; h::Left
-    ; j::Down
-    ; k::Up
-    ; l::Right
 
-    ; ijkl --> arrow keys
+    ; ijkl arrow
     i::Up
     j::Left
     k::Down
     l::Right
-
-    ; wasd --> arrow keys
+    ; wasd arrow
     w::Up
     a::Left
     s::Down
@@ -27,61 +23,69 @@ Offset = 25 ; mouse movement offset value
 
 
     ; mouse control
+    e::WheelDown
+    r::WheelUp
+    ; t::WheelUp
+    ; g::WheelDown
     y::WheelUp
     h::WheelDown
     u::LButton
     o::RButton
-    
+
     ; fast movement
-    Shift & i:: ; cursor move up
-    While (GetKeyState("Shift","P") && GetKeyState("i","P")) {
-        MouseMove, 0, (Offset * -1), 0, R
-    }
-    Shift & k:: ; cursor move down
-    While (GetKeyState("Shift","P") && GetKeyState("k","P")) {
-        MouseMove, 0, Offset, 0, R
-    }
-    Shift & j:: ; cursor move left
-    While (GetKeyState("Shift","P") && GetKeyState("j","P")) {
-        MouseMove, (Offset * -1), 0, 0, R
-    }
-    Shift & l:: ; cursor move right
-    While (GetKeyState("Shift","P") && GetKeyState("l","P")) {
-        MouseMove, Offset, 0, 0, R
-    }
+    LAlt & i:: ; cursor move up
+        While (GetKeyState("LAlt","P") && GetKeyState("i","P")) {
+            MouseMove, 0, (Offset * -1), 0, R
+        }
+    LAlt & k:: ; cursor move down
+        While (GetKeyState("LAlt","P") && GetKeyState("k","P")) {
+            MouseMove, 0, Offset, 0, R
+        }
+    LAlt & j:: ; cursor move left
+        While (GetKeyState("LAlt","P") && GetKeyState("j","P")) {
+            MouseMove, (Offset * -1), 0, 0, R
+        }
+    LAlt & l:: ; cursor move right
+        While (GetKeyState("LAlt","P") && GetKeyState("l","P")) {
+            MouseMove, Offset, 0, 0, R
+        }
 
     ; slow movement
-    Ctrl & i:: ; cursor move up
-    While (GetKeyState("Ctrl","P") && GetKeyState("i","P")) {
-        MouseMove, 0, (Offset/2 * -1), 0, R
-    }
-    Ctrl & k:: ; cursor move down
-    While (GetKeyState("Ctrl","P") && GetKeyState("k","P")) {
-        MouseMove, 0, Offset/2, 0, R
-    }
-    Ctrl & j:: ; cursor move left
-    While (GetKeyState("Ctrl","P") && GetKeyState("j","P")) {
-        MouseMove, (Offset/2 * -1), 0, 0, R
-    }
-    Ctrl & l:: ; cursor move right
-    While (GetKeyState("Ctrl","P") && GetKeyState("l","P")) {
-        MouseMove, Offset/2, 0, 0, R
-    }
+    Tab & i:: ; cursor move up
+        While (GetKeyState("Tab","P") && GetKeyState("i","P")) {
+            MouseMove, 0, (OffsetSlow * -1), 0, R
+        }
+    Tab & k:: ; cursor move down
+        While (GetKeyState("Tab","P") && GetKeyState("k","P")) {
+            MouseMove, 0, OffsetSlow, 0, R
+        }
+    Tab & j:: ; cursor move left
+        While (GetKeyState("Tab","P") && GetKeyState("j","P")) {
+            MouseMove, (OffsetSlow * -1), 0, 0, R
+        }
+    Tab & l:: ; cursor move right
+        While (GetKeyState("Tab","P") && GetKeyState("l","P")) {
+            MouseMove, OffsetSlow, 0, 0, R
+        }
+    
+    Return
 
 
     ; additional keys
+    Esc::`
+
     p::PrintScreen
     [::Home
     ]::End
-    \::Pause
-    
+
     `;::PgUp
     '::PgDn
-    
+
     .::Insert
     /::Del
     ; m::ScrollLock
     ; ,::Break
+    ; \::Pause
 
 
     ; media control
@@ -108,11 +112,7 @@ Offset = 25 ; mouse movement offset value
     =::F12
 
 
-    ; not using now
-    q::CapsLock ; capslock toggle 
-
-
-; capslock stand-alone setting
+; capslock stand-alone
 #If
 *CapsLock::
 KeyWait, CapsLock

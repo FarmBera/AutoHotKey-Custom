@@ -2,6 +2,44 @@
 
 ## Alpha Version
 
+### v0.3.9-rc
+
+- rc released
+
+### v0.3.9-bugs
+
+- `Pause/Break` 키 작동 안함
+
+### v0.3.9-dev3
+
+- 마우스 커서 이동하는 변수 수정
+  - 편리한 유지/보수를 위해 변수를 나눴음
+  - `Offset` --> 기본 속도
+  - `OffsetSlow` --> 느리게 움직일 때 속도
+- 키 추가
+  - Capslock + Q --> Capslock 토글
+  - Capslock + ESC --> ` (Escape 문자)
+  - Pause/Break 키 임시 추가
+
+### v0.3.8-rc
+
+- 마우스 이동하는 키 변경
+  - Left_Alt --> 빠르게 이동
+  - Tab --> 느리게 이동
+- SCH ver
+  - Down, Left 키 뒤바뀐거 변경
+
+### v0.3.8-bugs
+
+- [Solved] 마우스 커서 이동 시, `PrintScreen` 키 입력되는 오류
+- [Solved] Numberpad 단축키에서 `0`, `.`, `+` 입력 시, 설정해놓은 다음 키 값이 눌리는 오류
+  - ex) `Numpad0` 키를 누르면 `Ctrl + Z` 만 실행되어야 하는데, 다음 작업인 `Ctrl + Y` 가 실행되는 등
+
+### v0.3.8-dev
+
+- 변수 이용하여 키 이름 대체하려고 하는데 잘 안됨
+- 함수처럼 길게 써야해서, 변수 사용은 deprecated
+
 ### v0.3.7-dev
 
 - Capslock 토글 전용 키 추가
