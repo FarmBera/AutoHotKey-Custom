@@ -4,7 +4,7 @@ SetDefaultMouseSpeed, 0
 
 
 Offset = 25 ; mouse movement offset value
-OffsetSlow = Offset/2 ; slow mouse movement
+OffsetSlow := Offset/2 ; slow mouse movement
 
 
 ; numberpad actions
@@ -18,39 +18,39 @@ NumpadAdd::^s ; Ctrl + S --> Save
 ; powerpoint pen tools
 Numpad1:: ; pen 1
     CoordMode, Mouse, Screen
-    MouseClick, Left, 185, 140, 1
+    MouseClick, Left, 185, 150, 1 ; 180
     return
 Numpad2:: ; pen 2
     CoordMode, Mouse, Screen
-    mouseclick, Left, 230, 140, 1
+    mouseclick, Left, 230, 150, 1 ; 230
     return
 Numpad3:: ; pen 3
     CoordMode, Mouse, Screen
-    mouseclick, Left, 280, 140, 1
+    mouseclick, Left, 280, 150, 1 ; 280
     return
 Numpad4:: ; highlighter 1
     CoordMode, Mouse, Screen
-    mouseclick, Left, 370, 140, 1
+    mouseclick, Left, 380, 150, 1 ; 370 --> 380
     return
 Numpad5:: ; highlighter 2
     CoordMode, Mouse, Screen
-    mouseclick, Left, 420, 140, 1
+    mouseclick, Left, 430, 150, 1 ; 420 --> 430
     return
 Numpad6:: ; highlighter 3
     CoordMode, Mouse, Screen
-    mouseclick, Left, 470, 140, 1
+    mouseclick, Left, 480, 150, 1 ; 470 --> 480
     return
 Numpad7:: ; cursor tool
     CoordMode, Mouse, Screen
-    mouseclick, Left, 30, 140, 1
+    mouseclick, Left, 30, 150, 1 ; 30
     return
 Numpad8:: ; lasso tool
     CoordMode, Mouse, Screen
-    mouseclick, Left, 80, 140, 1
+    mouseclick, Left, 80, 150, 1 ; 80
     return
 Numpad9:: ; eraser tool
     CoordMode, Mouse, Screen
-    mouseclick, Left, 130, 140, 1
+    mouseclick, Left, 130, 150, 1 ; 130
     return
 
 
@@ -119,7 +119,7 @@ Numpad9:: ; eraser tool
     Return
 
 
-     ; additional keys
+    ; additional keys
     Esc::`
 
     p::PrintScreen

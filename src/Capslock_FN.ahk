@@ -3,7 +3,7 @@ SetCapsLockState, AlwaysOff
 
 
 Offset = 25 ; mouse movement offset value
-OffsetSlow = Offset/2 ; slow mouse movement
+OffsetSlow := Offset/2 ; slow mouse movement
 
 
 #If GetKeyState("Capslock","P")
