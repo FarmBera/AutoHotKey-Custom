@@ -15,42 +15,61 @@ NumpadDot::^y ; Ctrl + Y --> Redo
 NumpadAdd::^s ; Ctrl + S --> Save
     return
 
+
 ; powerpoint pen tools
+xPos = 30
+yPos = 150
+delta = 47 ; 45~50
+; xPos := 30
+; yPos := 150
+; delta := 50
+; global xPos = 30
+; global yPos = 150
+; global delta = 50
+; global xPos := 30
+; global yPos := 150
+; global delta := 50
+
+
+xtest := 30
+ytest := 150
+
 Numpad1:: ; pen 1
     CoordMode, Mouse, Screen
-    MouseClick, Left, 185, 150, 1 ; 180
+    MouseClick, Left, xtest, ytest, 1 ; 180
+    ; MouseClick, Left, xPos + (delta * 3), yPos, 1 ; 180
     return
 Numpad2:: ; pen 2
     CoordMode, Mouse, Screen
-    mouseclick, Left, 230, 150, 1 ; 230
+    mouseclick, Left, xPos + (delta * 4), yPos, 1 ; 230
     return
 Numpad3:: ; pen 3
     CoordMode, Mouse, Screen
-    mouseclick, Left, 280, 150, 1 ; 280
+    mouseclick, Left, xPos + (delta * 5), yPos, 1 ; 280
     return
 Numpad4:: ; highlighter 1
     CoordMode, Mouse, Screen
-    mouseclick, Left, 380, 150, 1 ; 370 --> 380
+    mouseclick, Left, xPos + (delta * 6), yPos, 1 ; 370 --> 380
     return
 Numpad5:: ; highlighter 2
     CoordMode, Mouse, Screen
-    mouseclick, Left, 430, 150, 1 ; 420 --> 430
+    mouseclick, Left, xPos + (delta * 7), yPos, 1 ; 420 --> 430
     return
 Numpad6:: ; highlighter 3
     CoordMode, Mouse, Screen
-    mouseclick, Left, 480, 150, 1 ; 470 --> 480
+    mouseclick, Left, xPos + (delta * 8), yPos, 1 ; 470 --> 480
     return
 Numpad7:: ; cursor tool
     CoordMode, Mouse, Screen
-    mouseclick, Left, 30, 150, 1 ; 30
+    mouseclick, Left, xPos, yPos, 1 ; 30
     return
 Numpad8:: ; lasso tool
     CoordMode, Mouse, Screen
-    mouseclick, Left, 80, 150, 1 ; 80
+    mouseclick, Left, xpos + delta, yPos, 1 ; 80
     return
 Numpad9:: ; eraser tool
     CoordMode, Mouse, Screen
-    mouseclick, Left, 130, 150, 1 ; 130
+    mouseclick, Left, xpos + (delta * 2), yPos, 1 ; 130
     return
 
 
